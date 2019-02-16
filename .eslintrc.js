@@ -7,6 +7,7 @@ module.exports = {
         "semi": 0,
         "eol-last": 0,
         "max-len": 0,
-        "import/newline-after-import": 0
+        "import/newline-after-import": 0,
+        "no-unused-vars": 0
     }
 };
