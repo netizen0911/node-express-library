@@ -6,6 +6,7 @@ module.exports = {
         "no-console": 0,
         "semi": 0,
         "eol-last": 0,
-        "max-len": 0
+        "max-len": 0,
+        "import/newline-after-import": 0
     }
 };
