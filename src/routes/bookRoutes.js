@@ -1,5 +1,5 @@
-const express = require('express');
-const bookRouter = express.Router();
+const express = require('express')
+const bookRouter = express.Router()
 
 const books = [
   {
@@ -38,7 +38,7 @@ const books = [
     author: 'Lev Nikolayevich Tolstoy',
     read: false
   }
-];
+]
 
 bookRouter.route('/')
   .get((req, res) => {
@@ -49,12 +49,12 @@ bookRouter.route('/')
         { link: '/authors', title: 'Authors' },
       ],
       books
-    });
-  });
+    })
+  })
 
 bookRouter.route('/single')
   .get((req, res) => {
-    res.send('Hello single book');
-  });
+    res.send('Hello single book')
+  })
 
-module.exports = bookRouter;
+module.exports = bookRouter
