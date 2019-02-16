@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 
 const config = {
   user: 'library',
-  password: '9scendancY',
+  password: '********',
   server: 'pslibrarydb.database.windows.net', // You can use 'localhost\\instance' to connect to named instance
   database: 'PSLibrary',
 
@@ -22,6 +22,12 @@ const config = {
 sql.connect(config).catch(err => debug(err));
 
 app.use(morgan('tiny'));
+
+app.use((req, res, next) => {
+  debug('my middleware');
+  next();
+});
+
 app.use(express.static(path.join(__dirname, '/public/')));
 app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));

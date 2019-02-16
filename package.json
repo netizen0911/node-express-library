@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "node server/server.js",
     "dev": "parcel public/index.html",
-    "start": "set DEBUG=app:* & nodemon app.js",
+    "start": "set DEBUG=app,app:* & nodemon app.js",
     "lint": "./node_modules/.bin/eslint app.js"
   },
   "dependencies": {
